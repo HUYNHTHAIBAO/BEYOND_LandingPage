@@ -1,0 +1,85 @@
+.hero {
+  margin-top: 50px;
+  &-list {
+    @include flex($align-items: center, $gap: 3.8rem);
+  }
+  &-content {
+    max-width: 496px;
+  }
+  &-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: $primary-color;
+  }
+  &-heading {
+    margin-top: 18px;
+    font-size: 5rem;
+    font-weight: 700;
+    color: $title-color;
+    line-height: 56px;
+  }
+  &-text {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $text-color;
+    margin-top: 2.5rem;
+  }
+  &-action {
+    margin-top: 5rem;
+    @include flex($align-items: center);
+  }
+  &-button {
+    margin-right: 3.6rem;
+  }
+  &-icon {
+    // padding: 20px;
+    @include size(5.9rem, 5.9rem);
+    background-color: $white-color;
+    box-shadow: 0px 17px 25px rgba(140, 141, 146, 0.12);
+    @include flexCenter();
+    font-size: 1.6rem;
+    border-radius: 100rem;
+    color: $primary-color;
+    margin-right: 3.6rem;
+  }
+  &-video {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $title-color;
+  }
+  @include maxWidth(1023px) {
+    &-list {
+        @include flex($flex-direction: column)
+    }
+    &-content {
+        max-width: 100%;
+    }
+    &-heading {
+        font-size: 4rem;
+    }
+  }
+  @include maxWidth(479px) {
+    &-heading {
+        font-size: 3rem;
+        line-height: 1.4;
+    }
+    &-text {
+        font-size: 1.4rem;
+        margin-top: 2rem;
+    }
+    &-action {
+        margin-top: 3rem;
+    }
+    .button {
+        padding: 10px 20px;
+        font-size: 1.4rem;
+        margin-right: 2rem;
+    }
+    &-icon {
+        margin-right: 2rem;
+    }
+    &-video {
+        display: none;
+    }
+  }
+}

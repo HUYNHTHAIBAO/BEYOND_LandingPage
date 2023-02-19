@@ -1,0 +1,25 @@
+.logo {
+  margin-top: 15.8rem;
+  background-color: #f4f7fd;
+  &-list {
+    @include flex($justify-content: center, $gap:3rem);
+    padding: 7.7rem 24.2rem;
+  }
+  &-images {
+    object-fit: cover;
+  }
+  @include maxWidth(1079px) {
+    margin-top: 10rem;
+    &-list {
+      padding: 4rem 15rem;
+      gap: 1.5rem;
+    }
+  }
+  @include maxWidth(767px) {
+    margin-top: 5rem;
+    &-list {
+      padding: 3rem 2rem;
+      gap: 1.5rem;
+    }
+  }
+}

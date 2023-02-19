@@ -1,0 +1,82 @@
+.blog {
+  margin-top: 14rem;
+  &-heading {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    color: $title-color;
+    max-width: 45.4rem;
+  }
+  &-text {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $text-color;
+  }
+  &-list {
+    margin-top: 7.8rem;
+    @include flex($gap: 3.4rem);
+  }
+  &-card {
+    transition: all 0.2s linear;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    &__title {
+      transition: all 0.2s linear;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #000000;
+    }
+    &__text {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-top: 9px;
+      color: $text-color;
+    }
+    &__content {
+      padding: 3.3rem 1.5rem 3.5rem 2.3rem;
+    }
+
+    &:hover {
+      .blog-card__title {
+        color: $primary-color;
+      }
+      .blog-card__content {
+        background-color: #ffffff;
+      }
+      overflow: hidden;
+      box-shadow: 16px 13px 20px 2px #e2e7fb;
+    }
+  }
+  @include maxWidth(1023px) {
+    &-list {
+      @include flex($flex-direction: column);
+    }
+    &-card {
+      @include flex($align-items: center, $gap : 2rem);
+    }
+  }
+  @include maxWidth(767px) {
+    margin-top: 10rem;
+    &-heading {
+        font-size: 3rem;
+    }
+    &-text {
+        margin-top: 2rem;
+        font-size: 1.4rem;
+    }
+    &-list {
+        margin-top: 6rem;
+    }
+    &-card {
+        text-align: center;
+        @include flex($flex-direction: column, $align-items: center, $gap: 1rem);
+        &__content {
+            padding: 2rem 1rem 2rem 1rem;
+        }
+    }
+  }
+}

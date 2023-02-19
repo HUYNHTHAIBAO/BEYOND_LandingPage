@@ -1,0 +1,62 @@
+.who {
+    margin-top: 7.6rem;
+    &-list {
+        @include flex($align-items: center, $flex-direction: row-reverse, $gap : 8.7rem)
+    }
+    &-content {
+        max-width: 50.2rem;
+    }
+    &-title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $primary-color;
+    }
+    &-heading {
+        margin-top: 2.5rem;
+        font-size: 4rem;
+        font-weight: 700;
+        color: $title-color;
+    }
+    &-text {
+        margin-top: 2.5rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: $text-color;
+        margin-bottom: 3.7rem;
+    }
+    @include maxWidth (1023px) {
+        &-list {
+            @include flex($flex-direction : column-reverse, $align-items :center, $gap : 5rem)
+        }
+        &-content {
+            max-width: 70rem;
+        }
+    }
+    @include maxWidth (767px) {
+        margin-top: 4rem;
+        &-content {
+            max-width: none;
+        }
+        &-list {
+            gap: 2rem;
+        }
+        &-title {
+            font-size: 1.4rem;
+        }
+        &-heading {
+            font-size: 3rem;
+        }
+        &-text {
+            margin-top: 2rem;
+            font-size: 1.4rem;
+        }
+        &-button {
+            font-size: 1.4rem;
+        }
+    }
+    @include maxWidth(479px) {
+        &-button {
+            padding: 10px 20px;
+        }
+    }
+}

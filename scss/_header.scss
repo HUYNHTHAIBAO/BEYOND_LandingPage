@@ -1,0 +1,9 @@
+.header {
+  margin-top: 3rem;
+  &-main {
+    @include flex($justify-content: space-between, $align-items: center);
+  }
+  @include maxWidth(479px) {
+    margin-top: 1rem;
+  }
+}

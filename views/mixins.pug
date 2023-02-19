@@ -1,0 +1,13 @@
+mixin serviceItem(icon, title, text)
+    .service-card 
+        .service-card__icon 
+            img(src = icon)
+        h3.service-card__title= title
+        p.service-card__text= text
+mixin blogCard(img, title, text)
+    .blog-card 
+        img(src= img)
+        .blog-card__content 
+            h4.blog-card__title= title 
+            p.blog-card__text= text
+

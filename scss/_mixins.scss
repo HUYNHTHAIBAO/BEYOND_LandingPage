@@ -1,0 +1,29 @@
+@mixin flex(
+  $display: flex,
+  $align-items: start,
+  $justify-content: start,
+  $flex-direction: start,
+  $flex-wrap: nowrap,
+  $gap: ""
+) {
+  display: $display;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+  gap: $gap;
+}
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin maxWidth($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
